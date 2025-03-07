@@ -58,6 +58,7 @@ class NoteAddUpdateActivity : AppCompatActivity() {
         if (isEdit) {
             binding.edtCourse.setText(note?.course)
             binding.edtTitle.setText(note?.title)
+            binding.edtNote.setText(note?.detail)
             binding.btnSubmit.text = getString(R.string.update)
         } else {
             note = Note()
@@ -69,6 +70,7 @@ class NoteAddUpdateActivity : AppCompatActivity() {
         binding.btnSubmit.setOnClickListener {
             val course = binding.edtCourse.text.toString().trim()
             val title = binding.edtTitle.text.toString().trim()
+            val detail = binding.edtNote.text.toString().trim()
 
             if (course.isEmpty()) {
                 binding.edtCourse.error = getString(R.string.empty)
@@ -82,6 +84,7 @@ class NoteAddUpdateActivity : AppCompatActivity() {
             note?.apply {
                 this.course = course
                 this.title = title
+                this.detail = detail
                 if (!isEdit) this.date = DateHelper.getCurrentDate()
             }
 

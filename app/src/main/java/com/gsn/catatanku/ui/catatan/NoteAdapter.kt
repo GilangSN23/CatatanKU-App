@@ -35,7 +35,7 @@ class NoteAdapter : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
                 tvItemCourse.text = note.course
                 tvItemDate.text = note.date
                 tvItemTitle.text = note.title
-                cvItemNote.setOnClickListener {
+                btnEdit.setOnClickListener {
                     val intent = Intent(it.context, NoteAddUpdateActivity::class.java)
                     intent.putExtra(NoteAddUpdateActivity.EXTRA_NOTE, note)
                     it.context.startActivity(intent)

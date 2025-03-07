@@ -12,6 +12,6 @@ class NoteDiffCallback (private val oldNoteList: List<Note>, private val newNote
     override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
         val oldNote = oldNoteList[oldItemPosition]
         val newNote = newNoteList[newItemPosition]
-        return oldNote.course == newNote.course && oldNote.title == newNote.title
+        return oldNote.course == newNote.course && oldNote.title == newNote.title && oldNote.detail == newNote.detail && oldNote.foto == newNote.foto
     }
 }

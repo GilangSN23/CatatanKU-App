@@ -20,5 +20,11 @@ data class Note (
     var title: String? = null,
 
     @ColumnInfo(name = "date")
-    var date: String? = null
+    var date: String? = null,
+
+    @ColumnInfo(name = "detail")
+    var detail: String? = null,
+
+    @ColumnInfo(name = "foto")
+    var foto: String? = null
 ) : Parcelable
